@@ -16,7 +16,7 @@ public class RecipeController {
         this.recipeService = recipeService;
     }
 
-    @RequestMapping("/index")
+    @RequestMapping({"","/","/index"})
     public String getRecipes(Model model){
         log.debug("We are in recipe controller... ");
         model.addAttribute("recipes",recipeService.getRecipes());
